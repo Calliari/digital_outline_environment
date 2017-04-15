@@ -102,11 +102,11 @@ echo 'renaming nginx.default file to default in directory --> /etc/nginx/sites-a
 
 
 
-sudo npm install -g bower
-bower install
-npm install -g mocha
-npm install request --save
-npm install chai
+# sudo npm install -g bower
+# bower install
+# npm install -g mocha
+# npm install request --save
+# npm install chai
 
 
 
