@@ -78,12 +78,11 @@ echo 'renaming nginx.default file to default in directory --> /etc/nginx/sites-a
 
 
 
+################ test in module digital_outline ###############
+# sudo npm install
+# ./node_modules/.bin/mocha ./test/test-server.js 
 
-
-
-
-
-
+################ test in module digital_outline ###############
 
 
 

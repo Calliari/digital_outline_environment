@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/ubuntu/digital_outline_environment":{"guestpath":"/home/ubuntu/digital_outline_environment","hostpath":"/Users/Caliari/devOps/pipelineProj/digital_outline_environment","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/Caliari/devOps/pipelineProj/digital_outline_environment","disabled":false,"__vagrantfile":true}}}

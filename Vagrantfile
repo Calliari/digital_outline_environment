@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.10.100"
   config.hostsupdater.aliases = ["development.local"]
   config.vm.synced_folder "~/devOps/pipelineProj/digital_outline_environment" , "/home/ubuntu/digital_outline_environment"
-  config.vm.provision "shell", path: "provision.sh"
+  # config.vm.provision "shell", path: "provision.sh"
 
 
   # https://www.vagrantup.com/docs/provisioning/file.html
