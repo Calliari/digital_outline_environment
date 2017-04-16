@@ -23,8 +23,8 @@ echo ' authenticated ok'
  # echo 'creating new mongo path to start use mongo *****************......'
 
 # starting mongo
-mongo
-echo 'starting mongo *************************...'
+#mongo
+#echo 'starting mongo *************************...'
 
 ############# database installed up and running ######################
 
