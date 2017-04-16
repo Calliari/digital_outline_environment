@@ -23,7 +23,7 @@ echo ' authenticated ok'
  # echo 'creating new mongo path to start use mongo *****************......'
 
 # starting mongo
-sudo mongod
+mongo
 echo 'starting mongo *************************...'
 
 ############# database installed up and running ######################
