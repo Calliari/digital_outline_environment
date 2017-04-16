@@ -19,8 +19,8 @@ sudo apt-get install -y --allow-unauthenticated mongodb-org
 echo ' authenticated ok'
 
 # creating new mongo path to start use mongo 
- mongod --dbpath /var/lib/mongodb/data/db
- echo 'creating new mongo path to start use mongo *****************......'
+ # mongod --dbpath /var/lib/mongodb/data/db
+ # echo 'creating new mongo path to start use mongo *****************......'
 
 # starting mongo
 sudo mongod
