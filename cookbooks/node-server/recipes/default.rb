@@ -21,9 +21,7 @@ template '/etc/nginx/sites-available/default' do
 	notifies :reload, "service[nginx]"
 end
 
-# include_recipe 'apt'
-# include_recipe 'nodejs'
-# include_recipe 'git'
+
 # nodejs_npm 'pm2'
 # include_recipe 'nodejs::nodejs_from_package'
 
@@ -34,5 +32,8 @@ include_recipe 'nodejs'
 include_recipe 'git'
 include_recipe "nodejs::nodejs_from_source"
 include_recipe "nodejs::npm"
+nodejs_npm 'pm2'
+include_recipe 'nodejs::nodejs_from_package'
 
-include_recipe 'mongodb'
+# include_recipe 'mongodb'
+

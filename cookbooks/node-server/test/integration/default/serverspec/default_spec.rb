@@ -20,20 +20,19 @@ describe command ("node -v") do
 	its (:stdout) { should match /6\.10\.0/ }
 end
 
-
 describe command ("git --version") do 
-	its (:stdout) { should match /2\.7\.4/ }
+	its (:stdout) { should match /1\.9\.1/ }
 end
 
-
-# describe command ("npm -v") do 
-# 	its (:stdout) { should match /2\.7\.4/ }
-# end
+describe command ("npm -v") do 
+	its (:stdout) { should match /3\.10\.10/ }
+end
 
 describe package ("pm2") do 
 	it { should be_installed.by('npm') }
 end
-#
+
+
 
 
 
