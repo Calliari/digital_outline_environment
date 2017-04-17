@@ -7,11 +7,11 @@
 package 'nginx'
 
 
-package 'nginx' do
+package 'nginx' do 
 	action :install
 end
 
-service 'nginx' do
+service 'nginx' do 
 	supports status: true, restart: true, reload: true
 	action [:enable, :start]
 end
@@ -36,3 +36,4 @@ include_recipe "nodejs::nodejs_from_source"
 include_recipe "nodejs::npm"
 
 include_recipe 'mongodb'
+

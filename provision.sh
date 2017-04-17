@@ -1,6 +1,6 @@
 # #!/bin/bash
 #
-# vagrant destroy -f && vagrant up
+# vagrant destroy -f && vagrant up && vagrant ssh
 ###########################################
 
 # # Update the souces list
@@ -49,16 +49,24 @@
 
 # echo 'script runned'
 
-# ############## CHEF ###############
+# ############## CHEF dk in the instances ###############
+# https://kuldeeparya.wordpress.com/2015/10/25/how-to-set-up-install-chef-dk-on-ubuntu/
+# cd /home/ubuntu
+# sudo mkdir chef_DK 
+# cd chef_DK
+# sudo wget https://packages.chef.io/files/stable/chefdk/1.3.40/ubuntu/16.04/chefdk_1.3.40-1_amd64.deb
+# sudo dpkg -i chefdk_1.3.40-1_amd64.deb
 
+# ############## CHEF dk in the instances ###############
 
 # pull down new code
 
 
-cd /home/ubuntu/
-git clone git clone https://github.com/Calliari/digital_outline_environment.git
-berks vendor cookbooks
-sudo chef-client --local-mode --runlist 'recipe[node-server]'
+# cd /home/ubuntu/
+# git clone git clone https://github.com/Calliari/digital_outline_environment.git
+# git pull
+# berks vendor cookbooks
+# sudo chef-client --local-mode --runlist 'recipe[node-server]'
 
 # cd ~/app
 # git pull

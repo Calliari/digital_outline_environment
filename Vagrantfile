@@ -12,11 +12,11 @@ Vagrant.configure("2") do |config|
   #config.vm.provision "shell", path: "provision.sh"
 
   # https://www.vagrantup.com/docs/provisioning/file.html
-   #config.vm.provision "file", source: ".", destination: "/home/ubuntu/devEnvironment"
+  #config.vm.provision "file", source: ".", destination: "/home/ubuntu/devEnvironment"
 
-   # config.vm.provision "chef_solo" do |chef|
-   # 	chef.cookbooks_path = ['cookbooks']
-   # 	chef.run_list = ['recipe[node-server::default]']
-   # end
+   config.vm.provision "chef_solo" do |chef|
+   	chef.cookbooks_path = ['cookbooks']
+   	chef.run_list = ['recipe[node-server::default]']
+   end
 
 end
