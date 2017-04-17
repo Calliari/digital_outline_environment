@@ -1,12 +1,12 @@
 # #!/bin/bash
-#
-# vagrant destroy -f && vagrant up && vagrant ssh
-###########################################
 
-# # Update the souces list
+# vagrant destroy -f && vagrant up && vagrant ssh
+# ##########################################
+
+# Update the souces list
 # sudo apt-get update -y
 
-# # Upgrade any packages available
+# Upgrade any packages available
 # sudo apt-get upgrade -y
 
 # # Install the package for nginx

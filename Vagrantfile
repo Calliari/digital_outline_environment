@@ -9,10 +9,10 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.10.100"
   config.hostsupdater.aliases = ["development.local"]
   # config.vm.synced_folder "../app" , "/home/ubuntu/app"
-  #config.vm.provision "shell", path: "provision.sh"
+   config.vm.provision "shell", path: "provision.sh"
 
   # https://www.vagrantup.com/docs/provisioning/file.html
-  #config.vm.provision "file", source: ".", destination: "/home/ubuntu/devEnvironment"
+  # config.vm.provision "file", source: ".", destination: "/home/ubuntu/devEnvironment"
 
    config.vm.provision "chef_solo" do |chef|
    	chef.cookbooks_path = ['cookbooks']
