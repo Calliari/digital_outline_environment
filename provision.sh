@@ -15,6 +15,8 @@
  sudo apt-get upgrade -y
 # echo 'upgrading  *********************...'
 
+sudo apt-get -y install curl
+
 # sudo apt-get install -y --allow-unauthenticated mongodb-org
 # echo ' authenticated ok'
 
@@ -163,8 +165,10 @@
 # ############## CHEF dk in the instances ###############
 # https://kuldeeparya.wordpress.com/2015/10/25/how-to-set-up-install-chef-dk-on-ubuntu/
 cd /home/ubuntu
+sudo git clone https://github.com/Calliari/digital_outline_environment.git
 sudo mkdir chef_DK 
 cd chef_DK
+# curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable -v 0.18.30
 # sudo wget https://packages.chef.io/files/stable/chefdk/1.3.40/ubuntu/16.04/chefdk_1.3.40-1_amd64.deb
 # sudo dpkg -i chefdk_1.3.40-1_amd64.deb
 
