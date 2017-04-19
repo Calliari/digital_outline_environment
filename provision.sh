@@ -96,9 +96,7 @@ echo 'installing git ********************...'
 # ############## CHEF dk in the instances digital_outline ###############
 # https://kuldeeparya.wordpress.com/2015/10/25/how-to-set-up-install-chef-dk-on-ubuntu/
 cd /home/ubuntu
-sudo mkdir chef_DK 
-cd chef_DK
-sudo wget https://packages.chef.io/files/stable/chefdk/1.3.40/ubuntu/16.04/chefdk_1.3.40-1_amd64.deb
+sudo mkdir chef_DK && cd chef_DK && sudo wget https://packages.chef.io/files/stable/chefdk/1.3.40/ubuntu/16.04/chefdk_1.3.40-1_amd64.deb
 sudo dpkg -i chefdk_1.3.40-1_amd64.deb
 
 # ############## ENV CHEF vendor in the instances digital_outline_environment ###############
@@ -121,6 +119,9 @@ node app.js
 echo 'lanching app.js in digital_outline directory ************....'
 
 # ################ test in module digital_outline ###############
+interactions with the users should get a single user on a /GET:
+interactions with individual courses should show all courses of a type on /GET:
+
 . /node_modules/.bin/mocha ./test/test-server.js 
 
 # ################ test in module digital_outline ###############

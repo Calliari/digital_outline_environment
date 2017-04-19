@@ -9,17 +9,11 @@
 include_recipe 'apt'
 include_recipe 'nodejs'
 include_recipe 'git'
-# include_recipe "nodejs::npm"
-# include_recipe 'nodejs::nodejs_from_package'
-# include_recipe "mongodb::default"
-# include_recipe 'chef-client'
-# include_recipe "npm"
+include_recipe 'mongodb3::default'
 
 
 
 # https://supermarket.chef.io/cookbooks/sc-mongodb
-
-
 
 package 'nginx'
 
@@ -43,11 +37,4 @@ execute 'update apt' do
 	ignore_failure true
 end
 
-# execute 'npm install' do
-#   	command 'npm install'
-# end
-
-# execute "test npm install with node-gyp" do
-#   code "call npm install --global node-gyp"
-# end
 

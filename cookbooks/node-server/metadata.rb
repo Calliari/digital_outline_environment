@@ -19,12 +19,7 @@ chef_version '>= 12.9' if respond_to?(:chef_version)
 #
 # source_url 'https://github.com/<insert_org_here>/node-server'
 
- depends 'nodejs', '~> 3.0.0'	# nodejs dependencies
+ depends 'nodejs', '~> 3.0.0'	# nodejs dependencies https://supermarket.chef.io/cookbooks/nodejs
  depends 'git', '~> 6.0.0'  	# git dependencies
-
-
-# depends 'pm2', '~> 0.7.4'		# dependencies
-# depends 'chef-dk', '~> 3.1.0'	# chef dependencies 
-
-# depends 'poise-python', '~> 1.6.0'
+ depends 'mongodb3', '~> 5.3.0' # mongo dependencies https://supermarket.chef.io/cookbooks/mongodb3
 

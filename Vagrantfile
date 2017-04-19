@@ -8,7 +8,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.network "private_network", ip: "192.168.10.100"
   config.hostsupdater.aliases = ["development.local"]
-  # config.vm.synced_folder "../app" , "/home/ubuntu/app"
+  config.vm.synced_folder "../digital_outline" , "/home/ubuntu/digital_outline"
+  config.vm.synced_folder "../digital_outline_environment" , "/home/ubuntu/digital_outline_environment"
   # config.vm.provision "shell", path: "provision.sh"
 
   # https://www.vagrantup.com/docs/provisioning/file.html
@@ -20,3 +21,4 @@ Vagrant.configure("2") do |config|
    end
 
 end
+# This is the Vagrantfile 
