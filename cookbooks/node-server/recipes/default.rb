@@ -4,6 +4,23 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
+
+# DevOps projetc include_recipe
+include_recipe 'apt'
+include_recipe 'nodejs'
+include_recipe 'git'
+# include_recipe "nodejs::npm"
+# include_recipe 'nodejs::nodejs_from_package'
+# include_recipe "mongodb::default"
+# include_recipe 'chef-client'
+# include_recipe "npm"
+
+
+
+# https://supermarket.chef.io/cookbooks/sc-mongodb
+
+
+
 package 'nginx'
 
 
@@ -21,18 +38,16 @@ template '/etc/nginx/sites-available/default' do
 	notifies :reload, "service[nginx]"
 end
 
+execute 'update apt' do
+	command 'apt-get update'
+	ignore_failure true
+end
 
-# nodejs_npm 'pm2'
-# include_recipe 'nodejs::nodejs_from_package'
+# execute 'npm install' do
+#   	command 'npm install'
+# end
 
-
-# DevOps projetc include_recipe
-include_recipe 'apt'
-include_recipe 'nodejs'
-include_recipe 'git'
-include_recipe "nodejs::npm"
-nodejs_npm 'pm2'
-include_recipe 'nodejs::nodejs_from_package'
-
-# include_recipe 'mongodb'
+# execute "test npm install with node-gyp" do
+#   code "call npm install --global node-gyp"
+# end
 
