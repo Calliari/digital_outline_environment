@@ -60,11 +60,7 @@ describe 'node-server::default' do
       expect(chef_run).to include_recipe('nodejs::npm')
     end
 
-     it 'includes the `default` recipe' do
-    expect(chef_run).to include_recipe('include_recipe::default')
-  end
-
-
+   
     #   it 'should install pm2 via :npm' do
     #   expect(chef_run).to install_nodejs_npm('pm2')
     # end
