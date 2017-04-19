@@ -33,10 +33,6 @@ end
 # end
 
 
-
-
-
-
 # chef exec kitchen test -d never
 
 # chef exec kitchen verify
