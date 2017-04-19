@@ -44,21 +44,26 @@ describe 'node-server::default' do
       expect(chef_run).to include_recipe('apt')
     end
 
-    it 'should install npm' do
-      expect(chef_run).to include_recipe('nodejs::npm')
+     it 'should install nodejs' do
+      expect(chef_run).to include_recipe('nodejs')
     end
 
-    it 'should install nodejs' do
-      expect(chef_run).to include_recipe('nodejs')
+     it 'should install git' do
+      expect(chef_run).to include_recipe('git::default')
+    end
+
+    it 'should install npm' do
+      expect(chef_run).to include_recipe('nodejs::npm')
     end
 
     it 'should install nodejs::npm' do
       expect(chef_run).to include_recipe('nodejs::npm')
     end
 
-     it 'should install git' do
-      expect(chef_run).to include_recipe('git::default')
-    end
+     it 'includes the `default` recipe' do
+    expect(chef_run).to include_recipe('include_recipe::default')
+  end
+
 
     #   it 'should install pm2 via :npm' do
     #   expect(chef_run).to install_nodejs_npm('pm2')
