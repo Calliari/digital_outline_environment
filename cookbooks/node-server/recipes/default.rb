@@ -9,7 +9,7 @@
 include_recipe 'apt'
 include_recipe 'nodejs'
 include_recipe 'git'
-include_recipe 'mongodb3::default'
+# include_recipe 'mongodb3::default'
 
 
 
