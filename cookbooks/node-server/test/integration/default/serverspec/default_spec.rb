@@ -28,9 +28,9 @@ describe command ("npm -v") do
 	its (:stdout) { should match /3\.10\.10/ }
 end
 
-describe package ("pm2") do 
-	it { should be_installed.by('npm') }
-end
+# describe package ("pm2") do 
+# 	it { should be_installed.by('npm') }
+# end
 
 
 
