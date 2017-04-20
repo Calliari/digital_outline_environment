@@ -68,9 +68,8 @@ describe 'node-server::default' do
       expect(chef_run).to include_recipe('nodejs::npm')
     end
 
-    # describe file('/etc/profile.d/RAILS_ENV.sh') do
-    #   it { should be_file }
-    #   its(:content) { should include('export magic_shell_environment="MONGODB_URI"') }
+    # it 'should a value for magic_shell_environment' do
+    #   expect(chef_run).to add_magic_shell_environment('MONGODB_URI')
     # end
 
     #  it 'enables the apache2 service' do
