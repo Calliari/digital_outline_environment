@@ -5,20 +5,35 @@ end
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "ubuntu/trusty64"
-  config.vm.network "private_network", ip: "192.168.10.100"
-  config.hostsupdater.aliases = ["development.local"]
-  config.vm.synced_folder "../digital_outline" , "/home/ubuntu/digital_outline"
-  config.vm.synced_folder "../digital_outline_environment" , "/home/ubuntu/digital_outline_environment"
-  # config.vm.provision "shell", path: "provision.sh"
+# Spin up a virtual machine for application
+  config.vm.define "web" do |web|
+    web.vm.box = "ubuntu/trusty64"
+    web.vm.hostname = "web"
+    web.vm.network "private_network", ip: "192.168.10.100"
+    web.hostsupdater.aliases = ["development.local"]
+    web.vm.synced_folder "../digital_outline" , "/home/ubuntu/digital_outline"
+    web.vm.synced_folder "../digital_outline_environment" , "/home/ubuntu/digital_outline_environment"
 
-  # https://www.vagrantup.com/docs/provisioning/file.html
-  # config.vm.provision "file", source: ".", destination: "/home/ubuntu/devEnvironment"
+    web.vm.provision "chef_solo" do |web_chef|
+      web_chef.cookbooks_path = ['cookbooks']
+      web_chef.run_list = ['recipe[node-server::default]']
+    end
 
-   config.vm.provision "chef_solo" do |chef|
-   	chef.cookbooks_path = ['cookbooks']
-   	chef.run_list = ['recipe[node-server::default]']
-   end
+  end
+
+# Spin up a virtual machine for database
+ config.vm.define "db" do |db|
+    db.vm.box = "ubuntu/trusty64"
+    db.vm.hostname = "db"
+    db.vm.network "private_network", ip: "192.168.10.101"
+   
+    db.vm.provision "chef_solo" do |db_chef|
+      db_chef.cookbooks_path = ['cookbooks']
+      db_chef.run_list = ['recipe[node-server::mongo]']
+    end
+
+  end
+
 
 end
 

@@ -19,7 +19,7 @@ echo 'installing mogodb DATABASE *******************... '
  echo ' authenticated ok'
 
 # # creating new mongo path to start use mongo 
-#  # mongod --dbpath /var/lib/mongodb/data/db
+mongod --dbpath /var/lib/mongodb/data/db
 #  # echo 'creating new mongo path to start use mongo *****************......'
 
 # starting mongo server mongod

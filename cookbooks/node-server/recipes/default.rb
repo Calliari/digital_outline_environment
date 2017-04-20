@@ -4,16 +4,15 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
+# https://supermarket.chef.io/cookbooks/sc-mongodb
 
 # DevOps projetc include_recipe
+# This is the recipe for web application vagrant box
+
 include_recipe 'apt'
 include_recipe 'nodejs'
 include_recipe 'git'
-# include_recipe 'mongodb3::default'
 
-
-
-# https://supermarket.chef.io/cookbooks/sc-mongodb
 
 package 'nginx'
 
@@ -32,9 +31,8 @@ template '/etc/nginx/sites-available/default' do
 	notifies :reload, "service[nginx]"
 end
 
-execute 'update apt' do
-	command 'apt-get update'
-	ignore_failure true
+# https://github.com/customink-webops/magic_shell
+magic_shell_environment 'MONGODB_URI' do
+  value 'mongodb://192.168.10.101/outliners'
 end
-
 
