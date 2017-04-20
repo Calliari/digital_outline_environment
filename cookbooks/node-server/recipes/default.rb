@@ -32,7 +32,7 @@ template '/etc/nginx/sites-available/default' do
 end
 
 # https://github.com/customink-webops/magic_shell
-magic_shell_environment '' do
+magic_shell_environment 'MONGODB_URI' do
   value 'mongodb://192.168.10.101/outliners'
 end
 
