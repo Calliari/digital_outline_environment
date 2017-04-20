@@ -15,9 +15,24 @@ describe 'node-server::default' do
       runner.converge(described_recipe)
     end
 
-    it 'converges successfully' do
+     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+
+      it 'should include apt' do
+      expect(chef_run).to include_recipe('apt')
+    end
+
+    it 'should install nodejs' do
+      expect(chef_run).to include_recipe('nodejs')
+    end
+
+     it 'should install git' do
+      expect(chef_run).to include_recipe('git::default')
+    end
+
+
+   
 
     it 'should install nginx' do
       expect(chef_run).to install_package 'nginx'
@@ -40,18 +55,6 @@ describe 'node-server::default' do
       expect(template).to notify('service[nginx]').to(:reload)
    end
 
-     it 'should include apt' do
-      expect(chef_run).to include_recipe('apt')
-    end
-
-     it 'should install nodejs' do
-      expect(chef_run).to include_recipe('nodejs')
-    end
-
-     it 'should install git' do
-      expect(chef_run).to include_recipe('git::default')
-    end
-
     it 'should install npm' do
       expect(chef_run).to include_recipe('nodejs::npm')
     end
@@ -59,6 +62,20 @@ describe 'node-server::default' do
     it 'should install nodejs::npm' do
       expect(chef_run).to include_recipe('nodejs::npm')
     end
+
+
+    it 'should install nodejs::npm' do
+      expect(chef_run).to include_recipe('nodejs::npm')
+    end
+
+    # describe file('/etc/profile.d/RAILS_ENV.sh') do
+    #   it { should be_file }
+    #   its(:content) { should include('export magic_shell_environment="MONGODB_URI"') }
+    # end
+
+    #  it 'enables the apache2 service' do
+    #   expect(chef_run).to enable_service 'apache2'
+    # end
 
    
     #   it 'should install pm2 via :npm' do

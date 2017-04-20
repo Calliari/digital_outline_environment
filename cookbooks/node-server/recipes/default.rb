@@ -16,7 +16,6 @@ include_recipe 'git'
 
 package 'nginx'
 
-
 package 'nginx' do 
 	action :install
 end
@@ -32,7 +31,7 @@ template '/etc/nginx/sites-available/default' do
 end
 
 # https://github.com/customink-webops/magic_shell
-magic_shell_environment 'MONGODB_URI' do
-  value 'mongodb://192.168.10.101/outliners'
-end
+# magic_shell_environment 'MONGODB_URI' do
+#   value 'mongodb://192.168.10.101/outliners'
+# end
 
