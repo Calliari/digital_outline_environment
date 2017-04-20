@@ -68,7 +68,7 @@ describe 'node-server::default' do
       expect(chef_run).to include_recipe('nodejs::npm')
     end
 
-    it 'should a value for magic_shell_environment' do
+    it 'should a value for the magic_shell_environment' do
       expect(chef_run).to add_magic_shell_environment('MONGODB_URI')
     end
 
