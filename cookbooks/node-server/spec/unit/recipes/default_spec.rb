@@ -55,21 +55,21 @@ describe 'node-server::default' do
       expect(template).to notify('service[nginx]').to(:reload)
    end
 
-    it 'should install nodejs::npm' do
-      expect(chef_run).to include_recipe('nodejs::npm')
-    end
+    # it 'should install nodejs::npm' do
+    #   expect(chef_run).to include_recipe('nodejs::npm')
+    # end
 
     it 'should a value for the magic_shell_environment' do
       expect(chef_run).to add_magic_shell_environment('MONGODB_URI')
     end
 
-    it 'should install pm2 via :npm' do
-      expect(chef_run).to install_nodejs_npm('pm2')
-    end
+    # it 'should install pm2 via :npm' do
+    #   expect(chef_run).to install_nodejs_npm('pm2')
+    # end
 
-    it 'should install pm2' do
-      expect(chef_run).to include_recipe 'nodejs::nodejs_from_package' 
-    end
+    # it 'should install pm2' do
+    #   expect(chef_run).to include_recipe 'nodejs::nodejs_from_package' 
+    # end
 
 
 
