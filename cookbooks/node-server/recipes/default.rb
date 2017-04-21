@@ -10,9 +10,10 @@
 # This is the recipe for web application vagrant box
 
 include_recipe 'apt'
-include_recipe 'nodejs'
+include_recipe "nodejs"
+include_recipe 'pm2::default'
 include_recipe 'git'
-nodejs_npm 'pm2'
+# include_recipe 'nodejs::nodejs_from_package'
 
 # include_recipe 'bjn_ruby'
 
