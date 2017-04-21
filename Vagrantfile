@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     web.vm.hostname = "web"
     web.vm.network "private_network", ip: "192.168.10.100"
     web.hostsupdater.aliases = ["development.local"]
-    web.vm.synced_folder "../digital_outline" , "/home/ubuntu/digital_outline"
+    web.vm.synced_folder "../digital_outline_uat" , "/home/ubuntu/digital_outline_uat"
     web.vm.synced_folder "../digital_outline_environment" , "/home/ubuntu/digital_outline_environment"
 
     web.vm.provision "chef_solo" do |web_chef|
