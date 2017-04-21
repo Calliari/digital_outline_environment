@@ -12,6 +12,9 @@
 include_recipe 'apt'
 include_recipe 'nodejs'
 include_recipe 'git'
+nodejs_npm 'pm2'
+
+# include_recipe 'bjn_ruby'
 
 
 package 'nginx'

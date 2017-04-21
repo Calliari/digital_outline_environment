@@ -28,19 +28,9 @@ describe command ("npm -v") do
 	its (:stdout) { should match /3\.10\.10/ }
 end
 
-# describe file('/etc/profile.d/h.sh') do
-#   it { should_not be_file }
-# end
-
-# describe file('/etc/profile.d/RAILS_ENV.sh') do
-#   it { should be_file }
-#   its(:content) { should include('export RAILS_ENV="production"') }
-# end
-
-# describe package ("pm2") do 
-# 	it { should be_installed.by('npm') }
-# end
-
+describe package ("pm2") do 
+	it { should be_installed.by('npm') }
+end
 
 # chef exec kitchen test -d never
 
