@@ -24,7 +24,7 @@ chef_version '>= 12.9' if respond_to?(:chef_version)
  depends 'mongodb3', '~> 5.3.0' # mongo dependencies https://supermarket.chef.io/cookbooks/mongodb3
  # name 'magic_shell_environment'
  depends 'magic_shell'
- depends 'pm2'
+ # depends 'pm2'
 
  # depends 'bjn_ruby', '~> 2.2.3'
  
