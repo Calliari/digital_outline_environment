@@ -11,7 +11,7 @@
 
 include_recipe 'apt'
 include_recipe "nodejs"
-# include_recipe 'pm2::default'
+include_recipe 'pm2::default'
 include_recipe 'git'
 # include_recipe 'nodejs::nodejs_from_package'
 
