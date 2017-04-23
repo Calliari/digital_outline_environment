@@ -15,12 +15,7 @@ include_recipe "nodejs::npm"
 include_recipe 'git'
 # include_recipe 'pm2'  # working but the chef does not like it
 
-# include_recipe 'pm2'
-include_recipe 'pm2::nodejs'
-
-# include_recipe 'nodejs::nodejs_from_package'
-
-
+include_recipe 'pm2::default'
 
 package 'nginx'
 
