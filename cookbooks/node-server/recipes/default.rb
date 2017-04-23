@@ -47,4 +47,3 @@ magic_shell_environment 'MONGODB_URI' do
   value 'mongodb://192.168.10.101/outliners'
 end
 
-include_recipe 'pm2::default'
