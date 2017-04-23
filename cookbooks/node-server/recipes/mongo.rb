@@ -10,5 +10,6 @@
 
 # This is the recipe for mongo vagrant box
 
-include_recipe 'apt'
+
 include_recipe 'mongodb3::default'
+include_recipe 'apt'
