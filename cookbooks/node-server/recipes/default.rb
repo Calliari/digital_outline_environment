@@ -37,7 +37,4 @@ include_recipe 'git'
 include_recipe 'apt'
 
 
-execute "install pm2" do
-  command "npm install -g pm2"
-  notifies :run, "link[/usr/bin/pm2]"
-end
+
