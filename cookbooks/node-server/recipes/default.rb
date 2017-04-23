@@ -12,6 +12,8 @@
 include_recipe 'apt'
 include_recipe "nodejs"
 include_recipe "nodejs::npm"
+include_recipe "nodejs::pm2"
+
 include_recipe 'git'
 # include_recipe 'pm2'  # working but the chef does not like it
 
