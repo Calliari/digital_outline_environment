@@ -6,7 +6,7 @@ berks vendor cookbooks
 sudo chef-client --local-mode --runlist 'recipe[node-server]'
 
 
-cd ~/digital_outline_uat
+cd ~/digital_outlineApp
 git pull
 sudo npm install
 pm2 kill
