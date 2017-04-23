@@ -35,5 +35,6 @@ include_recipe "nodejs"
 include_recipe "nodejs::npm"
 include_recipe 'git'
 nodejs_npm 'pm2'
+include_recipe 'pm2'
 include_recipe 'nodejs::nodejs_from_package'
 include_recipe 'apt'
