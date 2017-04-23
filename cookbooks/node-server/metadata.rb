@@ -18,15 +18,14 @@ chef_version '>= 12.9' if respond_to?(:chef_version)
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/node-server'
-
+ depends "apt"
  depends 'nodejs', '~> 3.0.0'	# nodejs dependencies https://supermarket.chef.io/cookbooks/nodejs
  depends 'git', '~> 6.0.0'  	# git dependencies
  depends 'mongodb3', '~> 5.3.0' # mongo dependencies https://supermarket.chef.io/cookbooks/mongodb3
- # name 'magic_shell_environment'
+ 
  depends 'magic_shell'
- # depends 'pm2'
+ depends 'pm2'
 
- # depends 'bjn_ruby', '~> 2.2.3'
  
 
 

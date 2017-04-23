@@ -11,11 +11,17 @@
 
 include_recipe 'apt'
 include_recipe "nodejs"
-include_recipe 'pm2::default'
+include_recipe "nodejs::npm"
 include_recipe 'git'
+# include_recipe 'pm2::default'
+include_recipe 'pm2'
+
+
 # include_recipe 'nodejs::nodejs_from_package'
 
-# include_recipe 'bjn_ruby'
+# include_recipe "nodejs::pm2"
+
+
 
 
 package 'nginx'
