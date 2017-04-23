@@ -41,3 +41,5 @@ end
 
 
 
+# https://packages.chef.io/files/stable/chefdk/1.3.43/ubuntu/16.04/chefdk_1.3.43-1_amd64.deb
+# https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.9.0-1_amd64.deb
