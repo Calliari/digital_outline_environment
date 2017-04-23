@@ -18,7 +18,7 @@ chef_version '>= 12.9' if respond_to?(:chef_version)
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/node-server'
- depends "apt"
+ depends 'apt'
  depends 'nodejs', '~> 3.0.0'	# nodejs dependencies https://supermarket.chef.io/cookbooks/nodejs
  depends 'git', '~> 6.0.0'  	# git dependencies
  depends 'mongodb3', '~> 5.3.0' # mongo dependencies https://supermarket.chef.io/cookbooks/mongodb3
@@ -26,9 +26,7 @@ chef_version '>= 12.9' if respond_to?(:chef_version)
 
 
 # https://github.com/Mindera/pm2-cookbook/blob/master/metadata.rb
-depends 'poise-javascript', '~> 1.1.0'
- 
- # depends 'pm2', '~> 0.7.4'
+ depends 'pm2'
 
  
 
