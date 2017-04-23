@@ -9,3 +9,8 @@ default['nodejs']['binary']['checksum'] = '99c4136cf61761fac5ac57f80544140a3793b
 # node['poise-javascript']['install_nodejs']
 
 # <table> <tr> <th>Attribute</th> <th>Type</th> <th>Description</th> <th>Default</th> </tr> <tr> <td><tt>['pm2']['node_version']</tt></td> <td>String</td> <td>Node version to install</td> <td><tt>4.5.0</tt></td> </tr> <tr> <td><tt>['pm2']['pm2_version']</tt></td> <td>String</td> <td>PM2 node module version to install</td> <td><tt>latest</tt></td> </tr> <tr> <td><tt>['pm2']['npm_version']</tt></td> <td>String</td> <td>NPM node module version to install</td> <td><tt>latest</tt></td> </tr> </table>
+
+
+default_unless['pm2']['pm2_version'] = 'latest'
+default_unless['pm2']['npm_version'] = 'latest'
+default_unless['pm2']['node_version'] = '4.5.0'

@@ -26,6 +26,7 @@ chef_version '>= 12.9' if respond_to?(:chef_version)
 
 
 
+depends 'poise-javascript', '~> 1.1.0'
  
  # depends 'pm2', '~> 0.7.4'
 
