@@ -13,8 +13,10 @@ include_recipe 'apt'
 include_recipe "nodejs"
 include_recipe "nodejs::npm"
 include_recipe 'git'
-# include_recipe 'pm2::default'
-include_recipe 'pm2'
+# include_recipe 'pm2'  # working but the chef does not like it
+
+include_recipe 'pm2::default'
+
 
 
 # include_recipe 'nodejs::nodejs_from_package'
@@ -45,3 +47,4 @@ magic_shell_environment 'MONGODB_URI' do
   value 'mongodb://192.168.10.101/outliners'
 end
 
+include_recipe 'pm2::default'
