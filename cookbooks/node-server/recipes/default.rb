@@ -22,19 +22,21 @@ template '/etc/nginx/sites-available/default' do
 	notifies :reload, "service[nginx]"
 end
 
-include_recipe 'apt'
-include_recipe 'nodejs'
-include_recipe 'git'
-nodejs_npm 'pm2'
-
-
-
-include_recipe 'nodejs::nodejs_from_package'
-
 # https://github.com/customink-webops/magic_shell
 magic_shell_environment 'MONGODB_URI' do
   value 'mongodb://192.168.10.101/outliners'
 end
+
+
+
+
+include_recipe 'apt'
+include_recipe 'nodejs'
+include_recipe 'git'
+nodejs_npm 'pm2'
+include_recipe 'nodejs::nodejs_from_package'
+include_recipe 'nodejs_npm::pm2'
+
 
 
 
