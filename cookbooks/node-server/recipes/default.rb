@@ -10,6 +10,18 @@
 # This is the recipe for web application vagrant box
 
 
+include_recipe "nodejs"
+include_recipe 'git'
+include_recipe 'apt'
+
+nodejs_npm 'pm2'
+
+# include_recipe 'pm2'
+
+
+
+
+
 package 'nginx'
 
 package 'nginx' do 
@@ -31,13 +43,9 @@ magic_shell_environment 'MONGODB_URI' do
   value 'mongodb://192.168.10.101/outliners'
 end
 
-include_recipe "nodejs"
-include_recipe 'git'
-include_recipe 'apt'
-
-# nodejs_npm 'pm2'
 
 
 
-# include_recipe 'pm2'
+
+
 
