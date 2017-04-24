@@ -45,4 +45,4 @@ include_recipe 'apt'
 javascript_runtime 'iojs' if node['poise-javascript']['install_iojs']
 javascript_runtime 'nodejs' if node['poise-javascript']['install_nodejs']
 
-include_recipe 'pm2::default'
+include_recipe 'pm2'
