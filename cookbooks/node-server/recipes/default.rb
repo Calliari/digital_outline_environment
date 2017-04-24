@@ -14,9 +14,9 @@ include_recipe "nodejs"
 include_recipe 'git'
 include_recipe 'apt'
 
-nodejs_npm 'pm2'
+# nodejs_npm 'pm2'
 
-# include_recipe 'pm2'
+include_recipe 'pm2'
 
 
 
