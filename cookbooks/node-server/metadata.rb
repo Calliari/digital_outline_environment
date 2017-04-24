@@ -36,3 +36,4 @@ depends 'build-essential'
 
 
 
+depends 'bjn_ruby', '~> 2.2.3'

@@ -36,8 +36,9 @@ include_recipe 'nodejs'
 nodejs_npm 'pm2'
 
 
-include_recipe 'pm2'
+include_recipe 'pm2::default'
 
+include_recipe 'bjn_ruby'
 
 
 
