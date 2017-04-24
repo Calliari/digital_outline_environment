@@ -45,14 +45,10 @@ end
 #   version '6.10.0'
 # end
 
-# execute 'npm install' do
-#   command 'sudo npm install -g pm2'
-# end
-
 execute 'npm install' do
-  command "sudo npm install -g pm2"
-  action :run
+  command 'sudo npm install -g pm2'
 end
+
 
 
 

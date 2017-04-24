@@ -8,6 +8,6 @@ sudo chef-client --local-mode --runlist 'recipe[node-server]'
 
 cd ~/digital_outlineApp
 git pull
-sudo npm install -g pm2 
+sudo npm install 
 pm2 kill
 pm2 start app.js
