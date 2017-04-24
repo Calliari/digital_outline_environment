@@ -42,7 +42,7 @@ execute 'nodejs-sources' do
 end
 
 package 'nodejs' do
-  version '6.10.0'
+  # version '6.10.0'
 end
 
 execute 'npm install' do
