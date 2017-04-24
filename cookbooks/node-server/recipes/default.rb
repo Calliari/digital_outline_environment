@@ -35,6 +35,7 @@ end
 include_recipe 'git'
 include_recipe 'nodejs'
 nodejs_npm 'pm2'
+include_recipe 'apt'
 
 
 
