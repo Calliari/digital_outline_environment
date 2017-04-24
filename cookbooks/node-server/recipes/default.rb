@@ -41,9 +41,3 @@ include_recipe 'apt'
 
 # include_recipe 'pm2'
 
-include_recipe 'pm2'
-
-# Default runtimes, last one will be the default.
-javascript_runtime 'iojs' if node['poise-javascript']['install_iojs']
-javascript_runtime 'nodejs' if node['poise-javascript']['install_nodejs']
-
