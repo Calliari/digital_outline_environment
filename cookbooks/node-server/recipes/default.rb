@@ -34,20 +34,21 @@ end
 
 include_recipe 'git'
 include_recipe 'nodejs'
+nodejs_npm 'pm2'
 
 
 
-execute 'nodejs-sources' do
-  command 'curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -'
-end
+# execute 'nodejs-sources' do
+#   command 'curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -'
+# end
 
-package 'nodejs' do
-  # version '6.10.0'
-end
+# package 'nodejs' do
+#   # version '6.10.0'
+# end
 
-execute 'npm install' do
-  command 'sudo npm install -g pm2'
-end
+# execute 'npm install' do
+#   command 'sudo npm install -g pm2'
+# end
 
 
 
