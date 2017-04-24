@@ -25,9 +25,3 @@ chef_version '>= 12.9' if respond_to?(:chef_version)
  depends 'magic_shell'
 
 
-
-# depends 'pm2'
-
-# https://github.com/Mindera/pm2-cookbook/blob/master/metadata.rb
-
-
