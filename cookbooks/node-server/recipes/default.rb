@@ -31,9 +31,12 @@ end
 
 
 include_recipe 'apt'
-include_recipe 'nodejs'
 include_recipe 'git'
-nodejs_npm 'pm2::default'
+include_recipe 'nodejs'
+nodejs_npm 'pm2'
+
+
+include_recipe 'pm2'
 
 
 
