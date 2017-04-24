@@ -26,14 +26,8 @@ chef_version '>= 12.9' if respond_to?(:chef_version)
 
 
 
-
+# depends 'pm2'
 
 # https://github.com/Mindera/pm2-cookbook/blob/master/metadata.rb
- depends 'pm2'
 
 
-depends 'build-essential'
-
-
-
-depends 'bjn_ruby', '~> 2.2.3'

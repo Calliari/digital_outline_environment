@@ -29,16 +29,13 @@ end
 
 
 
-
 include_recipe 'apt'
 include_recipe 'git'
 include_recipe 'nodejs'
 nodejs_npm 'pm2'
 
 
-include_recipe 'pm2::default'
-
-include_recipe 'bjn_ruby'
+ # include_recipe 'pm2'
 
 
 
