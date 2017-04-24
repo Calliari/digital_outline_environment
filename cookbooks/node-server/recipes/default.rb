@@ -20,6 +20,8 @@ include_recipe 'apt'
 
 include_recipe "nodejs::nodejs_from_package"
 include_recipe "nodejs::npm"
+include_recipe "nodejs::pm2"
+
 
 
 package 'nginx'
