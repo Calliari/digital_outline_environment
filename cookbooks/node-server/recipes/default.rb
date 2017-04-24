@@ -46,7 +46,7 @@ end
 # end
 
 execute 'npm install' do
-  command 'sudo npm install -g pm2'
+  command 'npm install -g pm2'
 end
 
 
