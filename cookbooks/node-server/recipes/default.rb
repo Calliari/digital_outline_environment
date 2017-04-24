@@ -16,10 +16,10 @@ include_recipe 'apt'
 
 # nodejs_npm 'pm2'
 
-include_recipe 'pm2'
+# include_recipe 'pm2'
 
-
-
+include_recipe "nodejs::nodejs_from_package"
+include_recipe "nodejs::npm"
 
 
 package 'nginx'
