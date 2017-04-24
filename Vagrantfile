@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 
 # Spin up a virtual machine for application
   config.vm.define "web" do |web|
-    web.vm.box = "ubuntu/xenial64"
+    web.vm.box = "ubuntu/trusty64" 
     web.vm.box_check_update = true
     web.vm.hostname = "web"
     web.vm.network "private_network", ip: "192.168.10.100"
@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
 
 # Spin up a virtual machine for database
  config.vm.define "db" do |db|
-    db.vm.box = "ubuntu/xenial64"
+    db.vm.box = "ubuntu/trusty64"
     db.vm.box_check_update = true
     db.vm.hostname = "db"
     db.vm.network "private_network", ip: "192.168.10.101"
