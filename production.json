@@ -3,10 +3,11 @@
      "name": "digital_outlineApp",
      "script": "./digital_outlineApp/app.js",
      "watch"     : true,
-     "cwd": "./digital_outlineApp",
+     "cwd": "../digital_outlineApp",
      "env": {
        "MONGODB_URI": "mongodb://34.248.151.171",
-        "PORT": "3000"//,
+        "PORT": "3000"
+        //,
        // "ATTENDANCE_API": "http://localhost:3001",
        // "CLASS_API": "http://localhost:3002",
        // "PERFORMANCE_API": "http://localhost:3003",
@@ -16,7 +17,7 @@
 }]
 
 }
-
+// /home/ubuntu/digital_outline_environment/digital_outlineApp/digital_outlineApp/app.js
 
 // {
 //  "apps": [{
