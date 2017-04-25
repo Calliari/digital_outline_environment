@@ -10,4 +10,5 @@ cd ~/digital_outlineApp
 git pull
 sudo npm install pm2
 pm2 kill
-pm2 start app.js
+# pm2 start app.js 
+pm2 start production.json
