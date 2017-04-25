@@ -1,7 +1,7 @@
 {
  "apps": [{
      "name": "digital_outlineApp",
-     "script": "../../digital_outlineApp/app.js",
+     "script": "../digital_outlineApp/app.js",
      "watch"     : true,
      "cwd": "../digital_outlineApp",
      "env": {
