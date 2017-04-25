@@ -11,4 +11,3 @@ git pull
 sudo npm install 
 pm2 kill
 pm2 start app.js
-
