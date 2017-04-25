@@ -5,8 +5,8 @@
      "watch"     : true,
      "cwd": "../digital_outlineApp",
      "env": {
-       "MONGODB_URI": "mongodb://34.248.151.171",
-        "PORT": "3000"
+       "MONGODB_URI": "mongodb://34.248.151.171:27017",
+       "PORT": "3000"
      }
 }]
 
