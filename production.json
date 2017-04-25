@@ -1,16 +1,16 @@
 {
  “apps”: [{
      “name”: “digital_outlineApp”,
-     “script”: “./SpartaInterface/app.js”,
+     “script”: “./digital_outlineApp/app.js”,
      “watch”     : true,
      “cwd”: “./digital_outlineApp”,
      “env”: {
-       “NODE_ENV”: “dev”,
-       “PORT”: “3000”,
-       “ATTENDANCE_API”: “http://localhost:3001“,
-       “CLASS_API”: “http://localhost:3002",
-       “PERFORMANCE_API”: “http://localhost:3003",
-       “REGISTRY_API”: “http://localhost:3004",
-       “SECURITY_API”: “http://localhost:3005"
+       “MONGODB_URI”: “pm2 start app.js”,
+       // “PORT”: “3000”,
+       // “ATTENDANCE_API”: “http://localhost:3001“,
+       // “CLASS_API”: “http://localhost:3002",
+       // “PERFORMANCE_API”: “http://localhost:3003",
+       // “REGISTRY_API”: “http://localhost:3004",
+       // “SECURITY_API”: “http://localhost:3005"
      }]
 }
