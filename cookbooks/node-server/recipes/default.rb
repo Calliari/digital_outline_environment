@@ -38,21 +38,21 @@ end
 
 
 
-# execute 'nodejs-sources' do
-#   command 'curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -'
-# end
+execute 'nodejs-sources' do
+  command 'curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -'
+end
 
 # package 'nodejs' do
 #   # version '6.10.0'
 # end
 
-execute 'npm install' do
+execute 'npm install pm2' do
   command 'sudo npm install pm2 -g'
 end
 
-execute 'pm2 install' do
-  command 'npm install pm2 -g'
-end
+
+
+
 
 
 
