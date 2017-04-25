@@ -1,7 +1,7 @@
 {
  "apps": [{
      "name": "digital_outlineApp",
-     "script": "./digital_outlineApp/app.js",
+     "script": "../digital_outlineApp/app.js",
      "watch"     : true,
      "cwd": "../digital_outlineApp",
      "env": {
@@ -17,7 +17,8 @@
 }]
 
 }
-// /home/ubuntu/digital_outline_environment/digital_outlineApp/digital_outlineApp/app.js
+  //home/ubuntu/digital_outline_environment/digital_outlineApp/digital_outlineApp/app.js
+ //home/ubuntu/digital_outline_environment/digital_outlineApp/digital_outlineApp/app.js
 
 // {
 //  "apps": [{
