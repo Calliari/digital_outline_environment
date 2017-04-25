@@ -5,7 +5,7 @@
      “watch”     : true,
      “cwd”: “./digital_outlineApp”,
      “env”: {
-       “MONGODB_URI”: “pm2 start app.js”,
+       “MONGODB_URI”: “34.248.151.171”,
        // “PORT”: “3000”,
        // “ATTENDANCE_API”: “http://localhost:3001“,
        // “CLASS_API”: “http://localhost:3002",
