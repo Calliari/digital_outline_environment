@@ -5,8 +5,10 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-
+include_recipe 'git'
 include_recipe 'apt'
+include_recipe 'nodejs'
+nodejs_npm 'pm2'
 
 
 package 'nginx'
@@ -32,10 +34,7 @@ magic_shell_environment 'MONGODB_URI' do
 end
 
 
-include_recipe 'git'
-include_recipe 'nodejs'
-nodejs_npm 'pm2'
-include_recipe 'apt'
+
 
 
 
@@ -47,9 +46,13 @@ include_recipe 'apt'
 #   # version '6.10.0'
 # end
 
-# execute 'npm install' do
-#   command 'sudo npm install -g pm2'
-# end
+execute 'npm install' do
+  command 'sudo npm install pm2 -g'
+end
+
+execute 'pm2 install' do
+  command 'npm install pm2 -g'
+end
 
 
 
