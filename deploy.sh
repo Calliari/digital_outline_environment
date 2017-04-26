@@ -1,22 +1,17 @@
 #pull down new code
 
-cd ~/digital_outline_environment
+cd ~/env
 git pull
 berks vendor cookbooks
 sudo chef-client --local-mode --runlist 'recipe[node-server]'
 
 
-cd ~/digital_outlineApp
+cd ~/app
 git pull
-sudo npm install pm2
+npm install
+bower install
+
+
+cd ~/env
 pm2 kill
-# pm2 start app.js 
-# pm2 start production.json
-
-
-
-
-
-
-cd ~/digital_outline_environment
 pm2 start production.json
