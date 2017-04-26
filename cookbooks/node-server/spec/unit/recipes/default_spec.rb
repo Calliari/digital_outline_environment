@@ -63,9 +63,13 @@ describe 'node-server::default' do
       expect(chef_run).to add_magic_shell_environment('MONGODB_URI')
     end
 
-    # it 'should install pm2 via :npm' do
-    #   expect(chef_run).to install_nodejs_npm('pm2')
-    # end
+    it 'should install pm2 via npm' do
+      expect(chef_run).to install_nodejs_npm('pm2')
+    end
+
+    it 'should install bower via npm' do
+      expect(chef_run).to install_nodejs_npm('bower')
+    end
 
  
 

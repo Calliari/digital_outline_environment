@@ -32,6 +32,10 @@ describe package ("pm2") do
 	it { should be_installed.by('npm') }
 end
 
+describe package ("bower") do 
+  it { should be_installed.by('npm') }
+end
+
 # chef exec kitchen test -d never
 
 # chef exec kitchen verify

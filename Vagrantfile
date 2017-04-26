@@ -12,8 +12,8 @@ Vagrant.configure("2") do |config|
     web.vm.hostname = "web"
     web.vm.network "private_network", ip: "192.168.10.100"
     web.hostsupdater.aliases = ["development.local"]
-    web.vm.synced_folder "../digital_outlineApp" , "/home/ubuntu/digital_outlineApp"
-    web.vm.synced_folder "../digital_outline_environment" , "/home/ubuntu/digital_outline_environment"
+    web.vm.synced_folder "../app" , "/home/ubuntu/app"
+    # web.vm.synced_folder "../digital_outline_environment" , "/home/ubuntu/digital_outline_environment"
 
     web.vm.post_up_message = "Welcome! This is the vagrant virtual environment.
   Use the command 'vagrant ssh web' to access your the app.

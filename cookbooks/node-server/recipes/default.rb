@@ -9,6 +9,7 @@ include_recipe 'git'
 include_recipe 'apt'
 include_recipe 'nodejs'
 nodejs_npm 'pm2'
+nodejs_npm 'bower'
 
 
 package 'nginx'
