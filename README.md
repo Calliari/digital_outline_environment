@@ -46,7 +46,7 @@ bower install
 node app.js
 ```
 
-visit localhost:3000 to view the app running
+visit http://development.local/#!/ to view the app running in your browser
 
 ### Installing
 
