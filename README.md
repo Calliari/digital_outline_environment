@@ -5,7 +5,7 @@ This is the an environment for a digital outline environemnt, so developers can 
 * Node Server Ubuntu trusty 64
 * Vagrant (Mongo) database is include in this environment
 
-### Prerequisites
+### Prerequisites Installing
 What things you need to install the software and how to install them
 
 ```
@@ -68,7 +68,18 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+How to run the automated tests for this system
+
+```
+* Run chef spec
+cd cookbooks/node-server && sudo chef exec rspec
+
+* Chef server to retrieve the latest cookbooks and system metadata
+sudo chef-client --local-mode --runlist 'recipe[node-server]'
+
+* Run the integration tests
+sudo chef exec rspec cookbooks/node-server/test/integration/default/serverspec/default_spec.rb
+```
 
 ### Break down into end to end tests
 
