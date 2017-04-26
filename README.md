@@ -33,6 +33,8 @@ cd app
 node app.js
 ```
 
+visit localhost:3000 to view the app running
+
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
