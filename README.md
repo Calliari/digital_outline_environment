@@ -5,6 +5,15 @@ This is the an environment for a digital outline environemnt, so developers can 
 * Node Server Ubuntu trusty 64
 * Vagrant (Mongo) database is include in this environment
 
+### Prerequisites
+What things you need to install the software and how to install them
+
+```
+git 
+vagrant 
+virtual box
+```
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -27,9 +36,13 @@ cd env
 vagrant up
 vagrant ssh web
 ```
+
 ### inside vagrant machine
+
 ```
-cd app
+cd /home/ubuntu/app
+npm install
+bower install
 node app.js
 ```
 
