@@ -25,7 +25,7 @@ git clone git@github.com:Calliari/digital_outlineApp.git app
 ```
 cd env
 vagrant up
-vagrant ssh
+vagrant ssh web
 ```
 ### inside vagrant machine
 ```
