@@ -1,17 +1,36 @@
-# Project Title
+# Digital Outline Environment
 
-One Paragraph of project description goes here
+This is the an environment for a digital outline environemnt, so developers can have the same environment for e better deployment.
+
+* Node Server Ubuntu trusty 64
+* Vagrant (Mongo) database is include in this environment
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Checkout Project
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+mkdir digital_outline
+cd digital_outline
+git clone git@github.com:Calliari/digital_outline_environment.git env
+git clone git@github.com:Calliari/digital_outlineApp.git app
+```
+
+### Run Project
+
+```
+cd env
+vagrant up
+vagrant ssh
+```
+### inside vagrant machine
+```
+cd app
+node app.js
 ```
 
 ### Installing
